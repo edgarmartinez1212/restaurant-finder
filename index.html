@@ -11,23 +11,30 @@
 
 <body>
     <header>Restaurant Finder</header>
-    <main>
-        <form action="" class="flex flex-col w-fit gap-3">
-            <input type="text" placeholder="Type City and State" class="border">
-            <div id="form-options" class="flex flex-row gap-3">
-                <select name="cuisine-options" id="cuisine-options" class="w-fit">
-                    <option value="" disabled selected>Select Cuisine</option>
-                </select>
-                <select name="price-range-options" id="price-range-options" class="w-fit">
-                    <option value="" disabled selected>Select Price Range</option>
-                </select>
-            </div>
-            <button type="submit" id="submit-button"
+    <main class="flex flex-col">
+        <form id="restaurant-form" class="flex flex-row w-fit gap-3">
+            <input type="text" placeholder="Type a City and State" class="border">
+            <button id="form-submit-button"
                 class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Search</button>
         </form>
 
-        <div id="restaurant-card">
-            
+        <div id="form-options" class="flex flex-row gap-3">
+            <select name="cuisine-options" id="cuisine-dropdown" class="w-fit">
+                <option value="" disabled selected>Select Cuisine</option>
+            </select>
+            <select name="price-range-options" id="price-range-dropdown" class="w-fit">
+                <option value="" disabled selected>Select Price Range</option>
+            </select>
+        </div>
+
+        <div id="restaurant-cards" class="flex flex-col gap-3">
+            <!-- name data[i].name-->
+            <!-- photo data[i].photo.images.original.url-->
+            <!-- description data[i].description-->
+            <!-- address data[i].address_obj.street1 city state country postalcode-->
+            <!-- hours -->
+            <!-- cuisine type data[i].cuisine.anem-->
+            <!-- price data[i].price -->
         </div>
     </main>
     <footer></footer>
