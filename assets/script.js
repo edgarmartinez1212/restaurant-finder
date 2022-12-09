@@ -12460,23 +12460,17 @@ function handleFormSubmit(event) {
 
   let results = data.results.data;
   createCards(results);
-  //   for (let i = 0; i < results.length; i++) {
-  //     console.log(`name: ${results[i].name}`);
-  //     console.log(`description: ${results[i].description}`);
-  //     console.log(`address: ${results[i].address_obj.street1} ${results[i].address_obj.city} ${results[i].address_obj.state} ${results[i].address_obj.country} ${results[i].address_obj.postalcode}`);
-  //     console.log(`hours:`);
-  //     console.log(`cuisine: ${results[i].cuisine[0].name}`);
-  //     console.log(`price: ${results[i].price} ${results[i].price_level}`);
-  //   }
 }
 
 function createCards(results) {
-  let length;
+  let length = getLength(results);
 
-  if (results.length > 10) {
-    length = 10;
-  } else {
-    length = data.length;
+  function getLength(results) {
+    if (results.length > 10) {
+      return 10;
+    } else {
+      return data.length;
+    }
   }
 
   for (let i = 0; i < 10; i++) {
